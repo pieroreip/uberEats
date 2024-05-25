@@ -1,16 +1,49 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      {{title}}
-    </ion-title>
+  <ion-toolbar class="header">
+    <ion-grid>
+        <ion-row>
+          <ion-col size="12" class="bordecito flexin">
+            <div class="bordercito">
+              <p class="texto-gris">Entregar ahora</p>
+              <p>
+              <strong>Ubicacion</strong>
+              </p>
+            </div>
+            <div class="bordercito flexin flexin-centro">
+              <div class="circulo flexin flexin-centro">
+                <img src="https://static-00.iconduck.com/assets.00/bell-icon-428x512-e8b5peda.png" alt="">
+              </div>
+            </div>
+          </ion-col>
+          <ion-col size="12" class="bordecito">
+            <ion-searchbar placeholder="Buscar Uber Eats" class="buscador"></ion-searchbar>
+          </ion-col>
+        </ion-row>
+    </ion-grid>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
 
-  <div id="container">
-    <strong>{{mensaje}}</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-  <ion-button href="/prueba">holaaaaaa</ion-button>
+
+  <swiper-container [slidesPerView]="4" [loop]="false" class="marginado">
+    <swiper-slide *ngFor="let x of  listaCategoria">
+      <div class="flexin-columna">
+        <img src="https://cdn-icons-png.freepik.com/512/10366/10366416.png" alt="" class="img">
+      <p class="texto">{{x.categoria}}</p>
+      </div>
+      
+    </swiper-slide>
+
+  </swiper-container>
+  <swiper-container [slidesPerView]="4" [loop]="false">
+    <swiper-slide *ngFor="let y of  listaFiltros">
+      <div class="filtro">
+        <p class="texto-2"><strong>{{y.filtro}}</strong></p>
+      </div>
+      
+      
+    </swiper-slide>
+
+  </swiper-container>
 </ion-content>

@@ -11,6 +11,31 @@ export class HomePage implements OnInit{
 
   mensaje:String="mensajito"
   title="Holaaa"
+  listaCategoria=[
+    { categoria:'Desayuno' },
+    { categoria:'Cafe' },
+    { categoria:'Retail' },
+    { categoria:'Super' },
+    { categoria:'Farmacia' },
+
+    { categoria:'Opciones saludables' },
+    { categoria:'Helado' },
+    { categoria:'BBQ' },
+    { categoria:'Articulos para mascota' },
+    { categoria:'Alitas' },
+    { categoria:'Comidas reconfortables' },
+  ]
+  listaFiltros=[
+    { filtro: 'Ofertas' },
+    { filtro: 'Menos de 30 minutos' },
+    { filtro: 'Costo' },
+    { filtro: 'Costo de envio' },
+
+    { filtro: 'Paga con pluxee' },
+    { filtro: 'Tipo de dieta' },
+    { filtro: 'Mayor clasificacion' },
+    { filtro: 'Organizar' },
+  ]
 
   ngOnInit(){
     this.mensaje="oye"
