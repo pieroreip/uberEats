@@ -1,0 +1,25 @@
+.horizontal-scroll {
+  display: flex;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.slide {
+  margin-right: 10px;
+  padding: 12px;
+}
+
+.slide img {
+  width: 180px;
+  height: 50px;
+}
+
+.slide span {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+.horizontal-scroll::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <div class="flex">
+      <ion-label>
+      <strong>Inicio de sesion</strong>
+      </ion-label>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <div class="flex">
+    <img src="https://i.pinimg.com/originals/e5/07/d7/e507d704d4b6fdcb17116762fcd99acd.gif" alt="" class="img">
+  </div>
+  <form (ngSubmit)="iniciar_sesion()">
+    <ion-list>
+      <ion-item class="item-inputs">
+        <ion-input  [(ngModel)]="email" name="email" placeholder="Correo..." type="email" ></ion-input>
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-item>
+      <ion-item class="item-inputs">
+        <ion-input  [(ngModel)]="password" name="password" placeholder="Contraseña..." type="password"></ion-input>
+        <ion-icon name="lock-closed-outline"></ion-icon>
+      </ion-item>
+      </ion-list>
+      <ion-button color="dark" expand="block" type="submit"><strong> INICIAR SESION</strong></ion-button>  
+  </form>
+
+ <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <p class="cuenta">¿No tienes cuenta? </p>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button expand="block" color="light" [routerLink]="['/registro']">REGISTRARSE</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

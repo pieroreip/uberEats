@@ -1,0 +1,71 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <ion-icon name="cart" class="icon-left"></ion-icon>
+    <strong>Carrito de compras</strong></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">
+        <ion-icon name="cart" class="icon-left"></ion-icon>
+        Carrito</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="cuadro">
+    <div class="flex">
+      <ion-label class="carrito"><strong>PRODUCTOS</strong></ion-label>
+    </div>
+
+    <div *ngIf="estado==false; else bloqueElse" style="padding: 20px;"> 
+      <p  style="text-align: center; font-size: 20px; color: rgb(0, 0, 0);">No hay producto agregado en este carro</p>
+    </div>
+    
+    <ng-template #bloqueElse>
+      <div style="padding:10px ;">
+        <div class="flex-between" *ngFor="let y of lista">
+          <div class="texto">
+            <p>{{y.producto}} x <strong >{{y.cantidad}}</strong> CLP {{y.precio_cantidad}}</p>
+          </div>
+          <div class="botones">
+  
+            <ion-fab-button class="remove-all" (click)="quitar(y)">
+              <ion-icon name="trash-outline"></ion-icon>
+            </ion-fab-button>
+  
+            <ion-fab-button class="remove" (click)="restar(y)">
+              <ion-icon name="remove"></ion-icon>
+            </ion-fab-button>
+  
+            <ion-fab-button class="add" (click)="sumar(y)">
+              <ion-icon name="add"></ion-icon>
+            </ion-fab-button>
+  
+          </div>
+        </div>
+      </div>
+
+    </ng-template>
+    
+  </div>
+  <ng-template #elseBlock>
+    <ion-button expand="block" color="success" [routerLink]="['/explorar']" style="margin-top: 15px; --color:black">
+      Explorar
+      <ion-icon name="search" slot="end"></ion-icon>
+    </ion-button>
+  </ng-template>
+
+  <img src="https://cdn4.iconfinder.com/data/icons/shopping-and-commerce-outline-color/512/shopping_commerce_21-1024.png" alt="" style="opacity: 0.3;">
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <p style="text-align: center;">TOTAL : <strong>CLP {{total}}</strong></p>
+    <ion-button expand="block" color="dark" *ngIf="estado==true; else elseBlock"  style="margin-top: 15px;" [routerLink]="['/pago']">
+      <strong>CONTINUAR</strong></ion-button>
+  </ion-toolbar>
+</ion-footer>

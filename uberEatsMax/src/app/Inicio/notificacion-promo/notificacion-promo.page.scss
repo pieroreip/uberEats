@@ -1,0 +1,28 @@
+ion-searchbar{
+    --border-radius:20px ;
+}
+.centro{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+}
+swiper-slide{
+    display: flex;
+    padding: 10px;
+    margin: 10px 0 10px 5px;
+    height: 100px;
+    width: 150px;
+    background-color: rgb(255, 227, 208);
+    border-radius: 10px;
+}
+swiper-slide:nth-child(2){
+    background-color: rgb(255, 176, 85);
+}
+swiper-slide:nth-child(3){
+    background-color: rgb(155, 255, 142);
+}

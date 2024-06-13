@@ -1,0 +1,223 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/carrito"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;"><strong> Terminar y pagar</strong></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-modal [isOpen]="isOpen">
+    <ng-template>
+      <ion-header [translucent]="true">
+        <ion-toolbar>
+          <ion-buttons slot="start">
+          </ion-buttons>
+          <ion-title style="text-align: center;"><strong> Programar entrega</strong></ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content> 
+      <swiper-container [slidesPerView]="2">
+        <swiper-slide>
+            <div class="cuadro">
+              <p><strong> Hoy</strong></p>
+              <p class="texto-gris">2 junio</p>
+            </div>
+        </swiper-slide>
+
+        <swiper-slide>
+          <div class="cuadro">
+            <p><strong> Mañana</strong></p>
+            <p class="texto-gris">3 junio</p>
+          </div>
+      </swiper-slide>
+
+      <swiper-slide>
+        <div class="cuadro">
+          <p><strong> Martes</strong></p>
+          <p class="texto-gris">4 junio</p>
+        </div>
+    </swiper-slide>
+
+    <swiper-slide>
+      <div class="cuadro">
+        <p><strong> Miercoles</strong></p>
+        <p class="texto-gris">5 junio</p>
+      </div>
+  </swiper-slide>
+
+  <swiper-slide>
+    <div class="cuadro">
+      <p><strong>Jueves</strong></p>
+      <p class="texto-gris">6 junio</p>
+    </div>
+</swiper-slide>
+
+<swiper-slide>
+  <div class="cuadro">
+    <p><strong> Viernes</strong></p>
+    <p class="texto-gris">7 junio</p>
+  </div>
+</swiper-slide>
+
+      </swiper-container>
+        <ion-list>
+          <ion-radio-group value="space-between">
+            <ion-item>
+              <ion-radio value="space-between" justify="space-between"><strong> 10:00-11:00</strong></ion-radio>
+            </ion-item>
+          
+          
+            <ion-item>
+              <ion-radio value="space-between" justify="space-between"><strong> 11:00-12:00</strong></ion-radio>
+            </ion-item>
+          
+          
+            <ion-item>
+              <ion-radio value="space-between" justify="space-between"><strong> 12:00-13:00</strong></ion-radio>
+            </ion-item>
+          
+          
+            <ion-item>
+              <ion-radio value="space-between" justify="space-between"><strong> 13:00-14:00</strong></ion-radio>
+            </ion-item>
+          
+          
+            <ion-item>
+              <ion-radio value="space-between" justify="space-between"><strong> 14:00-15:00</strong></ion-radio>
+            </ion-item>
+          
+          
+            <ion-item>
+              <ion-radio value="space-between" justify="space-between"><strong> 15:00-16:00</strong></ion-radio>
+            </ion-item>
+          
+          
+            <ion-item>
+              <ion-radio value="space-between" justify="space-between"><strong> 16:00-17:00</strong></ion-radio>
+            </ion-item>
+          
+          
+            <ion-item>
+              <ion-radio value="space-between" justify="space-between"><strong> 17:00-18:00</strong></ion-radio>
+            </ion-item>
+          
+          
+            <ion-item>
+              <ion-radio value="space-between" justify="space-between"><strong> 10:00-19:00</strong></ion-radio>
+            </ion-item>
+          </ion-radio-group>
+        </ion-list>
+
+      </ion-content>
+      <ion-footer>
+        <ion-toolbar>
+          <ion-button expand="block" style="--background:black; --color:white;">Programar</ion-button>
+          <ion-button (click)="setOpen(false)" expand="block" style="--background:white; --color:black;">Cancelar</ion-button>
+        </ion-toolbar>
+      </ion-footer>
+    </ng-template>
+  </ion-modal>
+
+  <ion-list>
+    <ion-item [button]="true" [routerLink]="['/direcciones']">
+      <ion-icon name="location-outline" slot="start"></ion-icon>
+      <div >
+        <p> <strong> Ubicacion</strong></p>
+        <p>Elegir ubicacion</p>
+      </div>
+      <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+    </ion-item>
+  </ion-list>
+  <ion-label style="margin-top: 20px; margin-left: 10px;"><strong>Tiempo de espera</strong></ion-label>
+  <div class="ion-padding flex-column">
+    <div class="flex">
+      <div class="flex-center">
+        <ion-icon name="bag-outline" slot="start" size="large" style="margin-left: 20px;"></ion-icon>
+      </div>
+
+      <div style="margin-left: 20px;">
+        <p><strong>Basica</strong></p>
+        <p>cerrado en este momento</p>
+      </div>
+    </div>
+
+    <div>
+      <div class="flex">
+        <div class="flex-center">
+          <ion-icon name="calendar-outline" slot="start" size="large" style="margin-left: 20px;"></ion-icon>
+        </div>
+  
+        <div style="margin-left: 20px;" (click)="setOpen(true)">
+          <p><strong>Programar</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <p style="margin-top: 15px; margin-left: 10px;"><strong>Resumen del pedido</strong></p>
+
+  <ion-accordion-group>
+    <ion-accordion value="first">
+      <ion-item slot="header" color="light">
+        <ion-label>{{cantidad}} pedidos</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-list>
+          <ion-item *ngFor="let x of lista">{{x.producto}} x {{x.cantidad}} = <strong>${{x.precio_cantidad}}</strong></ion-item>
+        </ion-list>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+
+  <div class="divider" style="margin-top: 20px;"></div>
+
+  <ion-list>
+    <ion-item [button]="true">
+      <ion-icon name="pricetag-outline" slot="start"></ion-icon>
+      <div >
+        <p>  Agrega una promocion</p>
+      </div>
+      <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+    </ion-item>
+  </ion-list>
+
+  <div class="divider" ></div>
+
+  <div class="flex-column">
+    <div class="flex-between">
+      <p class="texto-gris">Subtotal estimado</p>
+      <p class="texto-gris">CLP {{subtotal_estimado}}</p>
+    </div>
+    <div class="flex-between">
+      <p class="texto-gris">Costo de envio</p>
+      <p class="texto-gris"> CLP {{costo_envio}}</p>
+    </div>
+    <div class="flex-between">
+      <p class="texto-gris">Tarifas</p>
+      <p class="texto-gris"> CLP {{tarifas}}</p>
+    </div>
+    <div class="flex-between">
+      <p >Total estimado</p>
+      <p > CLP {{total}}</p>
+    </div>
+  </div>
+  <ion-list>
+    <ion-item [button]="true">
+      <ion-icon name="card" slot="start"></ion-icon>
+      <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button expand="block" color="dark">
+      <strong>Siguiente</strong></ion-button>
+  </ion-toolbar>
+</ion-footer>

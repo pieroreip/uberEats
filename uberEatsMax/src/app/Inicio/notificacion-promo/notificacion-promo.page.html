@@ -1,0 +1,31 @@
+<ion-content [fullscreen]="true">
+  <ion-toolbar style="padding-top: 3%;">
+    <ion-buttons slot="start">
+      <ion-button fill="clear" (click)="volver()">
+        <ion-icon slot="icon-only" name="arrow-back" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title size="large">Promociones</ion-title>
+  </ion-toolbar> 
+
+  
+  <ion-searchbar placeholder="Buscar" style="color: black;" placeholder="Ingresa codigo de promo" searchIcon="pricetag-outline"></ion-searchbar>
+  
+  <div class="centro">
+    <div class="column">
+      <img src="https://cdn-icons-png.flaticon.com/256/5673/5673350.png" alt="">
+    <ion-label>No hay promociones disponibles en estos momentos</ion-label>
+    </div>
+    
+  </div>
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <swiper-container [slidesPerView]="2" [loop]="false">
+      <swiper-slide><strong>Invita amigos a la App para que puedas regalar</strong></swiper-slide>
+      <swiper-slide><strong>Obten las mejores ofertas en cuestion de segundos</strong></swiper-slide>
+      <swiper-slide><strong>Sigue explorando para que puedas encontrar promociones que tu desees</strong></swiper-slide>
+    </swiper-container>
+  </ion-toolbar>
+</ion-footer>

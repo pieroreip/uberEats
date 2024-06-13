@@ -1,0 +1,67 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <div class="flex-between">
+      <ion-title>CUENTA
+      </ion-title>
+      <ion-icon name="person-circle" class="icon-left" size="large"></ion-icon>
+    </div>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">cuenta</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-grid>
+  <ion-row>
+
+    <ion-col size="4">
+      <div class="cuadro">
+        <img src="https://cdn.icon-icons.com/icons2/317/PNG/512/star-icon_34346.png" alt="" class="img">
+      </div>
+    
+        <p class="text-align">
+          <strong>  Favoritos</strong>
+        </p>
+      
+    </ion-col>
+
+    <ion-col size="4">
+      <div class="cuadro">
+        <img src="https://icons.veryicon.com/png/o/business/business-style-icon/wallet-62.png" alt="" class="img">
+      </div>
+      <p class="text-align">
+        <strong>  Billetera</strong>
+      </p>
+    </ion-col>
+    
+    <ion-col size="4">
+      <div class="cuadro">
+        <img src="https://cdn-icons-png.flaticon.com/512/199/199570.png" alt="" class="img">
+      </div>
+      <p class="text-align">
+      <strong>  Pedidos</strong>
+      </p>
+    </ion-col>
+
+  </ion-row>
+</ion-grid>
+
+<div class="divider"></div>
+
+<ion-list>
+  <div  *ngFor="let x of opciones">
+    <ion-item [button]="true" [routerLink]="x.ruta">
+      <ion-icon name={{x.icono}} class="icon-mover"></ion-icon>
+      <p><strong>{{x.opcion}}</strong></p>
+      <ion-icon name="chevron-forward-outline" class="icon-mover" slot="end"></ion-icon>
+    </ion-item>
+  </div>
+  
+</ion-list>
+
+</ion-content>

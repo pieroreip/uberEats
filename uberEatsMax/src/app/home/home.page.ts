@@ -37,6 +37,14 @@ export class HomePage implements OnInit{
     { filtro: 'Organizar' },
   ]
 
+  listaTiendas=[
+    {
+      imagen:"",
+      tienda:""
+    }
+  ]
+
+
   ngOnInit(){
     this.mensaje="oye"
   }

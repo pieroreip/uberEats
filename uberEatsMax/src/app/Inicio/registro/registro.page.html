@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <div class="flex">
+      <ion-label>
+      <strong>Registro</strong>
+      </ion-label>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="flex">
+    <img src="https://lordicon.com/icons/wired/outline/757-delivery.gif" alt="" class="img">
+  </div>
+  <form (ngSubmit)="register()">
+    <ion-list>
+      <ion-item class="item-inputs">
+        <ion-input  [(ngModel)]="email" name="email" placeholder="Correo..." type="email" ></ion-input>
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-item>
+      <ion-item class="item-inputs">
+        <ion-input  [(ngModel)]="password" name="password" placeholder="Contraseña..." type="password"></ion-input>
+        <ion-icon name="lock-closed-outline"></ion-icon>
+      </ion-item>
+  
+      <ion-item class="item-inputs">
+        <ion-input [(ngModel)]="password2" name="password2"   placeholder="Confirmar contraseña..." type="password"></ion-input>
+        <ion-icon name="lock-closed"></ion-icon>
+      </ion-item>
+  
+      
+    </ion-list>
+      <ion-button color="dark" expand="block" type="submit">Registrarse</ion-button>
+      
+  </form>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <p class="cuenta">¿Ya tienes cuenta? </p>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button expand="block" color="light" [routerLink]="['/iniciar-sesion']">Iniciar sesion</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+
+</ion-content>

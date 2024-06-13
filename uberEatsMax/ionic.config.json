@@ -1,7 +1,5 @@
 {
-  "name": "uberEatsMax",
-  "integrations": {
-    "capacitor": {}
-  },
+  "name": "AppDeli",
+  "integrations": {},
   "type": "angular"
 }

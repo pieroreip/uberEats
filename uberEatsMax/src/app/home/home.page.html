@@ -46,4 +46,29 @@
     </swiper-slide>
 
   </swiper-container>
+  <div class="flexin-center column marginado">
+    <p>Ofertas disponibles</p>
+    <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSWle8_LCQMqpkSL6j9p0z4n3zbyL97s8vHOHfWW_BL4NP3DHX1" alt="" class="radius">
+    <div class="flexeo">
+      <p class="par"><strong>JUMBO</strong></p>
+  
+        <p class="par rate">4.8</p>
+      
+    </div>
+  </div>
+<div class="dividor"></div>
+
+<p class="par"><strong>Tiendas cerca de ti</strong></p>
+
+<swiper-container [slidesPerView]="4" [loop]="false">
+  <swiper-slide *ngFor="let z of  listaTiendas">
+    <div class="filtro">
+      <p class="texto-2"><strong>{{z.tienda}}</strong></p>
+    </div>
+    
+    
+  </swiper-slide>
+
+</swiper-container>
+
 </ion-content>

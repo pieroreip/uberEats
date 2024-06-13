@@ -2,18 +2,53 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
+  
   {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  
   {
-    path: 'prueba',
-    loadChildren: () => import('./prueba/prueba.module').then( m => m.PruebaPageModule)
+    path: 'home',
+    loadChildren: () => import('./Inicio/home/home.module').then( m => m.HomePageModule)
+  },
+  
+  {
+    path: 'direcciones',
+    loadChildren: () => import('./Inicio/direcciones/direcciones.module').then( m => m.DireccionesPageModule)
+  },
+  {
+    path: 'explorar',
+    loadChildren: () => import('./Inicio/explorar/explorar.module').then( m => m.ExplorarPageModule)
+  },
+  {
+    path: 'locales-por-categoria/:categoria',
+    loadChildren: () => import('./Inicio/locales-por-categoria/locales-por-categoria.module').then( m => m.LocalesPorCategoriaPageModule)
+  },
+  {
+    path: 'notificacion-promo',
+    loadChildren: () => import('./Inicio/notificacion-promo/notificacion-promo.module').then( m => m.NotificacionPromoPageModule)
+  },
+  {
+    path: 'cuenta',
+    loadChildren: () => import('src/app/Inicio/cuenta/cuenta.module').then( m => m.CuentaPageModule)
+  },
+  {
+    path: 'carrito',
+    loadChildren: () => import('./Inicio/carrito/carrito.module').then( m => m.CarritoPageModule)
+  },
+  {
+    path: 'iniciar-sesion',
+    loadChildren: () => import('./Inicio/iniciar-sesion/iniciar-sesion.module').then( m => m.IniciarSesionPageModule)
+  },
+  {
+    path: 'registro',
+    loadChildren: () => import('./Inicio/registro/registro.module').then( m => m.RegistroPageModule)
+  },
+  {
+    path: 'pago',
+    loadChildren: () => import('./Inicio/pago/pago.module').then( m => m.PagoPageModule)
   },
 ];
 

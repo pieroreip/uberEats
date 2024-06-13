@@ -1,0 +1,50 @@
+.icon-left{
+    margin: 0 10px;
+}
+.cuadro{
+    background-color: rgb(228, 228, 228);
+    border-radius: 20px;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+}
+.carrito{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    background-color: rgb(192, 192, 192);
+    width: 90%;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+}
+.flex-between{
+    display: flex;
+    justify-content: space-between;
+    border:  solid 2px rgb(187, 187, 187);
+    border-radius: 20px;
+}
+.botones{
+    display: flex;
+    align-items: center;
+}
+ion-fab-button{
+    margin: 0 10px 0 10px;
+    height: 30px;
+    width: 30px;
+}
+.texto{
+    margin-left: 3px;
+}
+.remove{
+    --background: rgb(0, 0, 0);
+    --color:white;
+}
+.add{
+    --background:white;
+    --color: rgb(0, 0, 0);
+}
+.remove-all{
+    --background:red;
+    --color: white;
+}

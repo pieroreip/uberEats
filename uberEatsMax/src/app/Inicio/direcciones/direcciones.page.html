@@ -1,0 +1,30 @@
+<ion-content [fullscreen]="true">
+  <ion-toolbar style="padding-top: 3%;">
+    <ion-buttons slot="start">
+      <ion-button fill="clear" (click)="volver()">
+        <ion-icon slot="icon-only" name="arrow-back" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title size="large">Direcciones</ion-title>
+  </ion-toolbar>
+
+  <div>
+    
+    <ion-searchbar placeholder="Buscar" style="color: black; --border-radius: 20px;" searchIcon="navigate-circle-outline"></ion-searchbar>
+  </div>
+
+  <div style="padding: 5%; ">
+    <h3 style="font-weight: bold;">Explorar cerca de ti</h3>
+
+    <div style="display: flex; align-items: center;">
+      <ion-icon slot="icon-only" name="navigate" color="dark"></ion-icon>
+      <h6 style="padding-left: 2%;">Usar la ubicación actual</h6>
+
+      <button class="btn btn-primary float-right" style="margin-left: auto; border-radius: 30px; padding: 10px 20px;">Activar</button>
+    </div>
+    <hr style="flex: 1; margin-left: 10px; margin-right: 10px; border-bottom: 1px solid #ccc; padding-top: 1%;">
+    
+    
+  </div>
+  
+</ion-content>

@@ -1,0 +1,30 @@
+.flex-between{
+    display: flex;
+    justify-content: space-between;
+}
+.icon-left{
+    margin: 0 20px 0 0;
+}
+.cuadro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100px;
+    background-color: rgb(235, 235, 235);
+    border-radius: 20px;
+}
+.img{
+    height: 60%;
+}
+.text-align{
+    text-align: center;
+}
+.divider{
+    width: 100%;
+    border: solid 1px rgb(214, 214, 214);
+}
+.icon-mover{
+    margin: 0 10px 0 0;
+}
