@@ -11,6 +11,9 @@ import { Router } from '@angular/router';
 export class ExplorarPage implements OnInit {
 
   categorias: any[] = [];
+
+  estado:boolean=false
+
   traducciones: { [key: string]: string } = {
     Beef: 'Carne de res',
     Chicken: 'Pollo',
@@ -37,6 +40,7 @@ export class ExplorarPage implements OnInit {
         nombre: this.traducirCategoria(categoria.nombre),
         imagen: categoria.imagen
       }));
+      this.estado=true;
     });
   }
 

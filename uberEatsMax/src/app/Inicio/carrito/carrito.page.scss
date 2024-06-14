@@ -2,8 +2,9 @@
     margin: 0 10px;
 }
 .cuadro{
-    background-color: rgb(228, 228, 228);
+    background-color: rgb(255, 255, 255);
     border-radius: 20px;
+    box-shadow: 2px 2px 5px grey;
 }
 .flex{
     display: flex;
@@ -11,19 +12,28 @@
 }
 .carrito{
     margin-top: 10px;
-    margin-bottom: 5px;
-    background-color: rgb(192, 192, 192);
+
+    background-color: rgb(22, 22, 22);
     width: 90%;
     text-align: center;
     border-radius: 10px;
     color: white;
+    padding: 5px;
 }
 .flex-between{
     display: flex;
     justify-content: space-between;
-    border:  solid 2px rgb(187, 187, 187);
+    border:  solid 2px white;
+    background-color: white;
+    box-shadow: 2px 2px 5px grey;
     border-radius: 20px;
+    margin-top: 10px;
 }
+
+.flex-between p {
+    color:black;
+}
+
 .botones{
     display: flex;
     align-items: center;

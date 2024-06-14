@@ -9,49 +9,49 @@
   <swiper-container [slidesPerView]="4">
     <swiper-slide>
       <div class="column" (click)="mostrarLocales('Pizza')">
-        <img src="https://d4p17acsd5wyj.cloudfront.net/shortcuts/cuisines/pizza.png" alt="">
+        <img src="../../../assets/imgs/cat/pizza.png" alt="">
         <p><strong>Pizza</strong></p>
       </div>
     </swiper-slide>
     <swiper-slide>
       <div class="column" (click)="mostrarLocales('Super')">
-        <img src="https://d4p17acsd5wyj.cloudfront.net/shortcuts/uber_grocery.png" alt="">
+        <img src="../../../assets/imgs/cat/groceria.png" alt="">
         <p><strong>Super</strong></p>
       </div>
     </swiper-slide>
     <swiper-slide>
       <div class="column" (click)="mostrarLocales('Farmacia')">
-        <img src="https://d4p17acsd5wyj.cloudfront.net/shortcuts/pharmacy-v2.png" alt="">
+        <img src="../../../assets/imgs/cat/farmacia.png" alt="">
         <p><strong>Farmacia</strong></p>
       </div>
     </swiper-slide>
     <swiper-slide>
       <div class="column" (click)="mostrarLocales('Express')">
-        <img src="https://d4p17acsd5wyj.cloudfront.net/shortcuts/cuisines/fastfood.png" alt="">
+        <img src="../../../assets/imgs/cat/express.png" alt="">
         <p><strong>Express</strong></p>
       </div>
     </swiper-slide>
     <swiper-slide>
       <div class="column" (click)="mostrarLocales('Gourmet')">
-        <img src="https://cn-geo1.uber.com/static/mobile-content/eats/specialy_transparent_background.png" alt="">
+        <img src="../../../assets/imgs/cat/gourmet.png" alt="">
         <p><strong>Gourmet</strong></p>
       </div>
     </swiper-slide>
     <swiper-slide>
       <div class="column" (click)="mostrarLocales('Mascotas')">
-        <img src="https://cn-geo1.uber.com/static/mobile-content/eats/pet_supplies.png" alt="">
+        <img src="../../../assets/imgs/cat/mascota.png" alt="">
         <p><strong>Mascotas</strong></p>
       </div>
     </swiper-slide>
     <swiper-slide>
       <div class="column" (click)="mostrarLocales('Retail')">
-        <img src="https://d4p17acsd5wyj.cloudfront.net/shortcuts/retail-v2.png" alt="">
+        <img src="../../../assets/imgs/cat/retail.png" alt="">
         <p><strong>Retail</strong></p>
       </div>
     </swiper-slide>
     <swiper-slide>
       <div class="column" (click)="mostrarLocales('Electronica')">
-        <img src="https://d4p17acsd5wyj.cloudfront.net/shortcuts/electronics.png" alt="">
+        <img src="../../../assets/imgs/cat/electronica.png" alt="">
         <p><strong>Electronica</strong></p>
       </div>
     </swiper-slide>
@@ -60,10 +60,15 @@
 <div style="padding-left: 20px;padding-top: 20px;font-size: 18px;">
   <b style="text-align: center;">Restaurantes cerca de ti</b>
 </div>
+
+<div style="display: flex; justify-content: center; margin-top: 100px;" *ngIf="estado==false">
+  <ion-spinner name="circles" style="height: 100px; width: 100px;"></ion-spinner>
+</div>
+
 <ion-grid>
   <ion-row>
-    
-    <ion-col style="padding: 15px;font-weight: bold; text-align: center;" size="6" *ngFor="let categoria of categorias"><img [src]="categoria.imagen" alt="{{ categoria.nombre }}" style="border-radius: 15px; border: solid rgb(189, 189, 189) 2px;">
+    <ion-col style="padding: 15px;font-weight: bold; text-align: center;" size="6" *ngFor="let categoria of categorias"><img [src]="categoria.imagen" alt="{{ categoria.nombre }}" style="border-radius: 15px; border: solid rgb(255, 255, 255) 2px;
+    box-shadow: 2px 2px 5px grey;">
       {{ categoria.nombre }}</ion-col>
   </ion-row>
 </ion-grid>

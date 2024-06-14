@@ -28,7 +28,7 @@ export class CuentaPage implements OnInit {
     {
       icono:"pricetags",
       opcion:"Promociones",
-      ruta:"/cuenta"
+      ruta:"/notificacion-promo"
     },
     {
       icono:"help-buoy",
