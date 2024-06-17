@@ -1,8 +1,5 @@
 import os
 
-
-
-
 def subir():
     sw=0
     seguro=input("Seguro de hacer git add? y/n : ")

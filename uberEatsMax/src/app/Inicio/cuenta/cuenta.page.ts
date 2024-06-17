@@ -13,7 +13,7 @@ export class CuentaPage implements OnInit {
     {
       icono:"person",
       opcion:"Sesion",
-      ruta:"/registro"
+      ruta:"/perfil"
     },
     {
       icono:"people",

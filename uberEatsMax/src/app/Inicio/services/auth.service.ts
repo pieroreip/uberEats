@@ -1,11 +1,26 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';  
+import 'firebase/auth';
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
+ 
+
   constructor(private afa:AngularFireAuth) { }
+
+  async getUser(){
+    let user=await this.afa.currentUser
+    if(user){
+      return user.email
+    }else{
+      return null
+    }
+  }
+
 
   async signIn(email: string, password: string): Promise<boolean> {
     try {
@@ -25,14 +40,6 @@ export class AuthService {
       return false;
 
     }
-}
-async getUser(){
-  let user=await this.afa.currentUser
-  if(user){
-    return user.email
-  }else{
-    return null
-  }
 }
 
 async logOut():Promise<void>{

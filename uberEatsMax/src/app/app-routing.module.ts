@@ -5,7 +5,7 @@ const routes: Routes = [
   
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'verificacion',
     pathMatch: 'full'
   },
   
@@ -50,6 +50,11 @@ const routes: Routes = [
     path: 'pago',
     loadChildren: () => import('./Inicio/pago/pago.module').then( m => m.PagoPageModule)
   },
+  {
+    path: 'verificacion',
+    loadChildren: () => import('./Inicio/verificacion/verificacion.module').then( m => m.VerificacionPageModule)
+  },
+
 ];
 
 @NgModule({
