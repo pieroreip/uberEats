@@ -5,13 +5,40 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">pedido</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="container-4">
+    <div class="pe"></div>
+  </div>
+  <div class="container">
+  <div>Tienes {{minuto}}:{{segundo}} para cancelar el pedido.</div>
+  </div>
+  <div class="container-2">
+  <button (click)="volver()" expand="full" class="causa">Cancelar</button>
+  </div>
+  <div class="container-3">
+  <button (click)="volver()" expand="full" class="causa-2">Ver Pedido</button>
+  </div>
+
+  <div class="container-4">
+    <div class="pe-2"></div>
+  </div>
+  <div class="container">
+  <div>Pedido aceptado</div>
+  </div>
+  <div class="container-2">
   
-  <ion-button color="danger" (click)="volver()" expand="full">CANCELAR PEDIDO</ion-button>
+  </div>
+  <div class="container-3">
+  </div>
 
-
+  <div class="container-4">
+    <div class="pe-2"></div>
+  </div>
+  <div class="container">
+  <div>Estamos preparando tu pedido.</div>
+  </div>
+  <div class="container-2">
+  
+  </div>
+  <div class="container-3">
+  </div>
 </ion-content>

@@ -61,6 +61,10 @@ const routes: Routes = [
     path: 'boleta',
     loadChildren: () => import('./Inicio/boleta/boleta.module').then( m => m.BoletaPageModule)
   },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./Inicio/perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
 
 ];
 

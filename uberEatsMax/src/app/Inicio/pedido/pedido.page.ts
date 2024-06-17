@@ -11,8 +11,8 @@ export class PedidoPage implements OnInit {
 
   constructor(public ac:AlertController, public nav:NavController) { }
   conta:number=120
-  segundo:number=10
-  minuto:number=0
+  segundo:number=59
+  minuto:number=1
   estado:boolean=false
 
   async showMensaje(header:string,subHeader:string,mensaje:string){
