@@ -53,7 +53,15 @@ const routes: Routes = [
   {
     path: 'verificacion',
     loadChildren: () => import('./Inicio/verificacion/verificacion.module').then( m => m.VerificacionPageModule)
+  },  {
+    path: 'pedido',
+    loadChildren: () => import('./Inicio/pedido/pedido.module').then( m => m.PedidoPageModule)
   },
+  {
+    path: 'boleta',
+    loadChildren: () => import('./Inicio/boleta/boleta.module').then( m => m.BoletaPageModule)
+  },
+
 ];
 
 @NgModule({
