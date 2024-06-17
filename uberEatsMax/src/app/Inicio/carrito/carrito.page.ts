@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FirebaseService } from '../services/firebase.service';
+import { NavController } from '@ionic/angular';
 @Component({
   selector: 'app-carrito',
   templateUrl: './carrito.page.html',
@@ -7,7 +8,7 @@ import { FirebaseService } from '../services/firebase.service';
 })
 export class CarritoPage implements OnInit {
 
-  constructor(private fs:FirebaseService) { }
+  constructor(public nav:NavController ,private fs:FirebaseService) { }
   estado:boolean=false
   mensaje:string=""
   lista:any
@@ -54,5 +55,7 @@ export class CarritoPage implements OnInit {
       this.fs.agregarAlCarro(prod,prod.id);
     }
   }
-
+  volver(){
+    this.nav.navigateRoot('/home');
+  }
 }

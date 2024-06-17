@@ -1,7 +1,10 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      <ion-icon name="cart" class="icon-left"></ion-icon>
+      <ion-button (click)="volver()" fill="clear">
+        <ion-icon name="arrow-back" class="icon-left"></ion-icon>
+      </ion-button>
+      
     <strong>Carrito de compras</strong></ion-title>
   </ion-toolbar>
 </ion-header>
@@ -59,7 +62,7 @@
     </ion-button>
   </ng-template>
 
-  <img src="https://cdn4.iconfinder.com/data/icons/shopping-and-commerce-outline-color/512/shopping_commerce_21-1024.png" alt="" style="opacity: 0.3;">
+  <img src="https://cdn4.iconfinder.com/data/icons/shopping-and-commerce-outline-color/512/shopping_commerce_21-1024.png" alt="" style="opacity: 0.3;" class="img-carrito">
 
 </ion-content>
 <ion-footer>
@@ -69,3 +72,4 @@
       <strong>CONTINUAR</strong></ion-button>
   </ion-toolbar>
 </ion-footer>
+

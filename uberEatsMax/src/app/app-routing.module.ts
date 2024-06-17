@@ -54,7 +54,6 @@ const routes: Routes = [
     path: 'verificacion',
     loadChildren: () => import('./Inicio/verificacion/verificacion.module').then( m => m.VerificacionPageModule)
   },
-
 ];
 
 @NgModule({
