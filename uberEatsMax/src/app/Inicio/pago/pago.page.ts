@@ -42,5 +42,6 @@ export class PagoPage implements OnInit {
     })
   }
 
+  
 
 }

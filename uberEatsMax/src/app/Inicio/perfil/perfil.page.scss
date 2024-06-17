@@ -1,0 +1,22 @@
+.img{
+    height: 100px;
+    width: 100px;
+}
+.flex-column{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.flex-column>*{
+    margin: 10px;
+}
+.flex-column-2{
+    display: flex;
+    flex-direction: column;
+}
+.divider{
+    margin: 10px 0 10px 0 ;
+    width: 100%;
+    border:solid 1px rgb(187, 187, 187);
+}
