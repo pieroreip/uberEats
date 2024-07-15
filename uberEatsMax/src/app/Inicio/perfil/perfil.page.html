@@ -1,17 +1,41 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-button slot="start" fill="clear" color="dark" (click)="volver()">
+      <ion-icon name="arrow-back"></ion-icon>
+    </ion-button>
     <ion-title>Perfil</ion-title>
   </ion-toolbar>
 </ion-header>
-
-<ion-content [fullscreen]="true">
+<ion-content>
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Perfil</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div>
-    {{usuario}}
+  <div class="flex-column">
+    <img src="../../../assets/imgs/sesion/perfil.png" alt="" class="img">
+    <ion-label><strong>{{usuario}}</strong></ion-label>
+      <ion-label style="color:green;">EDITAR CUENTA</ion-label>
   </div>
+
+  <div style="margin: 20px 0 10px 10px;"><ion-label >Ubicaciones guadadas</ion-label></div>
+  <ion-list>
+    <ion-item [button]="true">
+      <ion-icon slot="start" name="home"></ion-icon>
+      <div class="flex-column-2">
+        <ion-label>Casa</ion-label>
+        <ion-label style="font-size: 12px; color:grey;">Agrega la direccion de tu casa</ion-label>
+      </div>
+    </ion-item>
+    <ion-item [button]="true">
+      <ion-icon slot="start" name="bag"></ion-icon>
+      <div class="flex-column-2">
+        <ion-label>Trabajo</ion-label>
+        <ion-label style="font-size: 12px; color:grey;">Agrega la direccion de tu trabajo</ion-label>
+      </div>
+    </ion-item>
+  </ion-list>
+  <div class="divider"></div>
+  <ion-button  fill="clear" color="danger" (click)="cerrar()">CERRAR SESION</ion-button>
 </ion-content>

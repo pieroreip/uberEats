@@ -41,6 +41,7 @@ imgModal:string=""
     getProductos(){
       this.fire.obtenerColeccion('Productos').subscribe((res)=>{
         this.productos=res;
+        console.log(res);
         });
         
       }
@@ -66,7 +67,8 @@ imgModal:string=""
                   producto:prod.producto,
                   precio:prod.precio,
                   cantidad:parseInt(res.cantidad),
-                  precio_cantidad:(prod.precio*res.cantidad)
+                  precio_cantidad:(prod.precio*res.cantidad),
+                  imagen:this.imgModal,
                 }
                 if(datos.precio_cantidad>0){
                   this.fire.agregarAlCarro(datos,prod.id);
